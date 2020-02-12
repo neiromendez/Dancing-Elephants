@@ -3,9 +3,10 @@ module.exports = {
 };
 let fs = require('fs');
 
-let elephants = randomNumber(2, 10);
-let cameraLens = randomNumber(1, 100);
-let acts = randomNumber(1, 15);
+//TODO: Sin limites en la cantidad de elefantes que se pueden usar.
+let elephants = randomNumber(1, 10);
+let cameraLens = randomNumber(1, 100000000);
+let acts = randomNumber(1, 150000);
 let pos = [];
 let actsPos = [];
 
@@ -27,13 +28,12 @@ async function main() {
 
 async function fillElephantsFirstPosition() {
     for (let i = 0; i < elephants; i++)
-        pos.push(randomNumber(1, 100));
+        pos.push(randomNumber(1, 1000000000));
 }
 
 async function fillActs() {
     for(let i = 0 ; i< acts;i++)
-        actsPos.push(randomNumber(1,elephants-1)+" "+randomNumber(1,100));
-
+        actsPos.push(randomNumber(1,elephants-1)+" "+randomNumber(1,1000000000));
 }
 
 function randomNumber(min, max) {

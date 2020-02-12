@@ -1,0 +1,20 @@
+{
+  "name": "dancing-elephants",
+  "version": "1.0.0",
+  "description": "Prueba para la empresa Plusteam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neiromendez/Dancing-Elephants.git"
+  },
+  "author": "Neiro Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neiromendez/Dancing-Elephants/issues"
+  },
+  "homepage": "https://github.com/neiromendez/Dancing-Elephants#readme"
+}

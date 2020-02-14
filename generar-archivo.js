@@ -4,9 +4,10 @@ module.exports = {
 let fs = require('fs');
 
 //TODO: Sin limites en la cantidad de elefantes que se pueden usar.
-let elephants = randomNumber(1, 10);
-let cameraLens = randomNumber(1, 100000000);
-let acts = randomNumber(1, 150000);
+
+let elephants = randomNumber(1, 15);
+let cameraLens = randomNumber(1, 25);
+let acts = randomNumber(10, 100);
 let pos = [];
 let actsPos = [];
 
@@ -16,9 +17,9 @@ async function main() {
 
     await fillElephantsFirstPosition();
     await fillActs();
-    resp.push(title,...pos,...actsPos);
+    resp.push(title, ...pos, ...actsPos);
 
-   await fs.writeFile('input.txt', resp.join('\n'), function (err) {
+    await fs.writeFile('inputx.txt', resp.join('\n'), function (err) {
         if (err)
             console.error('something happened');
     });
@@ -28,12 +29,12 @@ async function main() {
 
 async function fillElephantsFirstPosition() {
     for (let i = 0; i < elephants; i++)
-        pos.push(randomNumber(1, 1000000000));
+        pos.push(randomNumber(1, 50));
 }
 
 async function fillActs() {
-    for(let i = 0 ; i< acts;i++)
-        actsPos.push(randomNumber(1,elephants-1)+" "+randomNumber(1,1000000000));
+    for (let i = 0; i < acts; i++)
+        actsPos.push(randomNumber(0, elephants - 1) + " " + randomNumber(1, 35));
 }
 
 function randomNumber(min, max) {
